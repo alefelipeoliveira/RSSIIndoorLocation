@@ -1,6 +1,10 @@
 # RSSIIndoorLocation
 
 This repository is dedicated to test a dataset of RSSI Indoor Location Algorithm, currently using Trilateration and KNN.
+
+## Installation
+
+To install this project start downloading the git repository:
 ```
 $ git clone https://github.com/alefelipeoliveira/RSSIIndoorLocation.git
 ```
