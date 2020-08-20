@@ -17,3 +17,11 @@ Streamlit creates a frontend enviroment to run different algorithms in the datas
 ```
 $ streamlit run .\main.py
 ```
+
+ ## Related Publication
+ 
+This project use the dataset from the paper:
+ 
+S. Sadowski, P. Spachos, K. Plataniotis, "Memoryless Techniques and Wireless Technologies for Indoor Localization with the Internet of Things", IEEE Internet of Things Journal.
+
+https://github.com/pspachos/RSSI-Dataset-for-Indoor-Localization-Fingerprinting
