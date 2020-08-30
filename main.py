@@ -5,8 +5,9 @@ from Trilateration import *
 from pathloss import calculate_distance
 from error import error
 from knn import knn
+from statistics import mean
 
-dataset_list = ['Sadowski_1', 'Sadowski_2', 'Sadowski_3']
+dataset_list = ['Sadowski_1', 'Sadowski_3', 'Hernandez']
 
 dataset = st.sidebar.selectbox("Escolha o dataset",dataset_list)
 tech = st.sidebar.selectbox("Escolha a tecnologia", ['BLE', 'Zigbee', 'WIFI'])
@@ -42,12 +43,14 @@ if(algorithm == 'Trilateration' ):
     for i in range(len(list(Positions['x']))):
         ax.plot([Positions['x'][i], Positions['x_calc'][i]], [Positions['y'][i], Positions['y_calc'][i]], color = 'r')
     ax.scatter(list(Positions['x_calc']), list(Positions['y_calc']))
+    print (mean(list(Positions['error'])))
 elif(algorithm == 'KNN' ):
     ax.scatter(list(testset['x']), list(testset['y']))
     Positions = knn(database, testset, k)
     for i in range(len(list(Positions['x']))):
         ax.plot([Positions['x'][i], Positions['x_calc'][i]], [Positions['y'][i], Positions['y_calc'][i]], color = 'r')
     ax.scatter(list(Positions['x_calc']), list(Positions['y_calc']))
+    print (mean(list(Positions['error'])))
 
 #adapt picture dimensions to floorplan dimension (25x25m) to trajectory points match with floorplan
 ax.imshow(img, extent=list(Limits['limits']))

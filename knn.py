@@ -3,8 +3,6 @@ import copy
 from statistics import mean
 from error import error
 
-u = 0
-
 def euclidean(A, B):
     return ( ( (A[0] - B[0])**2 + (A[1] - B[1])**2 + (A[2] - B[2])**2 )**0.5 )
 
@@ -19,9 +17,11 @@ def nearest_index(neighbors, k):
 
 def knn(dataset, testset, k):
     x_calc, y_calc, error_list = [], [], []
+    columns = list(dataset.columns[3:])
     for u in range(0, len(testset['RSSI A'])):
-        test_point = [testset['RSSI A'][u], testset['RSSI B'][u], testset['RSSI C'][u]]
-
+        test_point = []
+        for i in columns:
+            test_point.append(testset[i][u])
         distances = []
 
         for i in range(len(dataset['RSSI A'])):
