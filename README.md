@@ -24,8 +24,12 @@ $ streamlit run .\main.py
 
  ## Related Publication
  
-This project use the dataset from the paper:
+This project use the dataset from the following papers:
  
 S. Sadowski, P. Spachos, K. Plataniotis, "Memoryless Techniques and Wireless Technologies for Indoor Localization with the Internet of Things", IEEE Internet of Things Journal.
 
 https://github.com/pspachos/RSSI-Dataset-for-Indoor-Localization-Fingerprinting
+
+BELMONTE-HERNÁNDEZ, A.; HERNÁNDEZ-PEÑALOZA, G.; GUTIÉRREZ, D. M.; ÁLVAREZ, F. Swiblux:Multi-sensor deep learning fingerprint for precise real-time indoor tracking.IEEE Sensors Journal, IEEE, v. 19, n. 9,p. 3473–3486, 2019.
+
+http://www.gatv.ssr.upm.es/~abh/
